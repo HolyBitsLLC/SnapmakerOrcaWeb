@@ -28,6 +28,41 @@
       "bed_size_x": 250,
       "bed_size_y": 210
     },
+    "Snapmaker A250": {
+      "printer_model": "Snapmaker A250",
+      "nozzle_diameter": 0.4,
+      "printable_height": 230,
+      "bed_size_x": 230,
+      "bed_size_y": 250
+    },
+    "Snapmaker A350": {
+      "printer_model": "Snapmaker A350",
+      "nozzle_diameter": 0.4,
+      "printable_height": 325,
+      "bed_size_x": 320,
+      "bed_size_y": 350
+    },
+    "Snapmaker Artisan": {
+      "printer_model": "Snapmaker Artisan",
+      "nozzle_diameter": 0.4,
+      "printable_height": 400,
+      "bed_size_x": 400,
+      "bed_size_y": 400
+    },
+    "Snapmaker J1": {
+      "printer_model": "Snapmaker J1",
+      "nozzle_diameter": 0.4,
+      "printable_height": 200,
+      "bed_size_x": 324,
+      "bed_size_y": 200
+    },
+    "Snapmaker U1": {
+      "printer_model": "Snapmaker U1",
+      "nozzle_diameter": 0.4,
+      "printable_height": 270.05,
+      "bed_size_x": 270,
+      "bed_size_y": 270
+    },
     "Voron 2.4": {
       "printer_model": "Voron 2.4 300",
       "nozzle_diameter": 0.4,

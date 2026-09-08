@@ -198,9 +198,26 @@ OrcaWeb ships with minimal built-in presets for common printers and materials.
 | Bambu Lab X1C | BambuLab X1C | 0.4 mm | 256 × 256 mm |
 | Creality Ender 3 | Creality Ender-3 | 0.4 mm | 220 × 220 mm |
 | Prusa MK4 | Prusa MK4 | 0.4 mm | 250 × 210 mm |
+| Snapmaker A250 | Snapmaker A250 | 0.4 mm | 230 × 250 mm |
+| Snapmaker A350 | Snapmaker A350 | 0.4 mm | 320 × 350 mm |
+| Snapmaker Artisan | Snapmaker Artisan | 0.4 mm | 400 × 400 mm |
+| Snapmaker J1 | Snapmaker J1 | 0.4 mm | 324 × 200 mm |
+| Snapmaker U1 | Snapmaker U1 | 0.4 mm | 270 × 270 mm |
 | Voron 2.4 | Voron 2.4 | 0.4 mm | 300 × 300 mm |
 
 Bed dimensions are also read from the `printable_area` field of an imported profile (or 3MF machine metadata), overriding the preset values.
+
+!!! note "Snapmaker presets are geometry-only"
+    The Snapmaker machine presets (Artisan, J1, A250, A350, U1) are sourced from
+    upstream `OrcaSlicer/OrcaSlicer` v2.4.2 (`resources/profiles/Snapmaker/`), not the
+    stale `Snapmaker/OrcaSlicer` fork. Like every built-in preset, they carry only the
+    modeled fields — model name, nozzle diameter, printable height, and bed size. The
+    per-machine `gcode_flavor` (Klipper for the U1 toolchanger, Marlin for the rest),
+    `machine_start_gcode`/`machine_end_gcode`, and the multi-extruder nozzle vector
+    (dual for Artisan/J1, four for the U1) are intentionally **not** bundled, because
+    OrcaWeb strips passthrough fields from built-in presets (see the fetch script and
+    ADR-012). For production slicing of these machines, import the full machine profile
+    JSON so the slicer receives the correct G-code dialect and start/end scripts.
 
 ### Quality presets
 

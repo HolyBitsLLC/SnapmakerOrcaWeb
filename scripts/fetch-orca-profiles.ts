@@ -73,6 +73,19 @@ const PRINTERS: PrinterSpec[] = [
   { label: 'Creality Ender 3', vendor: 'Creality', machine: 'Creality Ender-3 0.4 nozzle' },
   { label: 'Prusa MK4', vendor: 'Prusa', machine: 'Prusa MK4 0.4 nozzle' },
   { label: 'Voron 2.4', vendor: 'Voron', machine: 'Voron 2.4 300 0.4 nozzle' },
+  // Snapmaker — sourced from upstream OrcaSlicer/OrcaSlicer (the Snapmaker/OrcaSlicer
+  // fork is stale; upstream v2.4.2 already ships the full Snapmaker profile tree).
+  // One 0.4-nozzle machine profile per family, matching the convention above. Note
+  // Artisan/J1/U1 are multi-extruder machines (dual / IDEX / 4-tool toolchanger):
+  // their bundled preset collapses to a single 0.4 nozzle because passthrough
+  // (including the per-nozzle `nozzle_diameter` vector and `gcode_flavor`) is
+  // stripped from bundled presets — the same limitation the Bambu/Voron presets
+  // already have. Full fidelity is available via a user-imported machine profile.
+  { label: 'Snapmaker A250', vendor: 'Snapmaker', machine: 'Snapmaker A250 (0.4 nozzle)' },
+  { label: 'Snapmaker A350', vendor: 'Snapmaker', machine: 'Snapmaker A350 (0.4 nozzle)' },
+  { label: 'Snapmaker Artisan', vendor: 'Snapmaker', machine: 'Snapmaker Artisan (0.4 nozzle)' },
+  { label: 'Snapmaker J1', vendor: 'Snapmaker', machine: 'Snapmaker J1 (0.4 nozzle)' },
+  { label: 'Snapmaker U1', vendor: 'Snapmaker', machine: 'Snapmaker U1 (0.4 nozzle)' },
 ]
 
 // Draft/Standard/Fine quality tiers: sourced from Bambu X1C's process
