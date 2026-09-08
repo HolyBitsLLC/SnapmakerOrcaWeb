@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/OrcaWeb/previews/pr-192/sw.js', { scope: '/OrcaWeb/previews/pr-192/' })})}
